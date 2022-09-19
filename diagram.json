@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "author": "Numaan Formoli",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": -268.2, "left": 66.6, "attrs": {} },
+    {
+      "type": "wokwi-servo",
+      "id": "servo1",
+      "top": -459,
+      "left": -150.8,
+      "rotate": 180,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-analog-joystick",
+      "id": "joystick1",
+      "top": 106,
+      "left": 275.6,
+      "rotate": 180,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-servo",
+      "id": "servo2",
+      "top": -622.2,
+      "left": -150.8,
+      "rotate": 180,
+      "attrs": {}
+    }
+  ],
+  "connections": [
+    [ "joystick1:GND", "uno:GND.2", "black", [ "v-144", "h0" ] ],
+    [ "joystick1:VCC", "uno:5V", "red", [ "v-124.8", "h-9.6" ] ],
+    [ "joystick1:VERT", "uno:A0", "yellow", [ "v-163.2", "h-9.6" ] ],
+    [ "joystick1:HORZ", "uno:A1", "green", [ "v-172.8", "h0" ] ],
+    [ "servo2:GND", "uno:GND.1", "black", [ "h0" ] ],
+    [ "servo1:GND", "uno:GND.1", "black", [ "h0" ] ],
+    [ "servo1:V+", "uno:5V", "red", [ "h28.8", "v393.5", "h172.8" ] ],
+    [ "servo2:V+", "uno:5V", "red", [ "h38.4", "v547.1", "h163.2" ] ],
+    [ "servo2:PWM", "uno:9", "blue", [ "h0" ] ],
+    [ "servo1:PWM", "uno:10", "orange", [ "h0" ] ]
+  ]
+}
